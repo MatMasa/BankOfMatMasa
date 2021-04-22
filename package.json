@@ -1,0 +1,30 @@
+{
+  "name": "Bank of MatMasa",
+  "version": "1.0.0",
+  "description": "A Web application for a fictional bank",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+
+  "author": "MatMasa",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.1",
+    "http-status-codes": "^1.4.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.22",
+    "nodemon": "^2.0.4",
+    "passport": "^0.4.1",
+    "passport-local-mongoose": "^6.0.1"
+  },
+  "devDependencies": {
+    "chance": "^1.1.7"
+  }
+}

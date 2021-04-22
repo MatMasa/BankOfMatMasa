@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-12">
+        <div class="content">
+            <form method="POST" action="/users/<%-user._id%>/update?_method=PUT">
+                <%- include ('./partials/messages') %>
+
+                <input type="text" class="form-control" id="inputLName" name="lName" value="user.name">
+                <input type="text" class="form-control" id="inputTest1" name="test1" value="user.email">
+
+
+                <button type="submit" class="btn btn-primary">Update</button>
+
+            </form>
+            <br />
+            <a href="/users/management"> Cancel</a>
+        </div>
+    </div>
+</div>
