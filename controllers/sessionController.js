@@ -10,7 +10,6 @@ module.exports = {
         req.flash('error_msg', 'Please login to access that resource');
         res.redirect('/');
     },
-    // POISTHA
     
     isAdmin: (req, res, next) => {
         if (req.isAuthenticated()) {
