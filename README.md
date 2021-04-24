@@ -43,8 +43,11 @@ npm start
 
 ## Deployment
 
+* [Live preview](https://matmasa.xyz)
+
 Server used: Azure virtual pc running Ubuntu 18.04 LTS
 pm2: automated server handling and startup on system boot
+nginx: Reverse proxy
 
 
 
