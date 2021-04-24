@@ -13,6 +13,7 @@ const express = require('express'),
 //Load db:
 const db = require('./config/db');
 
+require('dotenv').config();
 //Passport config
 require('./config/passport')(passport);
 
@@ -38,10 +39,10 @@ app.use(
     secret: "someSecret621",
     cookie: {
       maxAge: 4000000,
-      sameSite: true // Same as 'Strict'
+      sameSite: 'Strict'
     },
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: false
   }),
   bodyParser.json(),
 );
