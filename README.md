@@ -1,6 +1,6 @@
 # Web application: Bank of MatMasa
 
-*Project description goes here*
+POC project, combining different skills and techologies that interest me
 
 ## Getting Started
 
@@ -15,7 +15,7 @@
 For getting the server running in development mode:
 
 1. Change the database connection string in db.js and make sure MongoDB is running.
-```
+
 
 2. Clone the repository and navigate to main project folder on terminal and enter:
 
@@ -43,7 +43,13 @@ npm start
 
 ## Deployment
 
-Coming soon...
+* [Live preview](https://matmasa.xyz)
+
+Server used: Azure virtual pc running Ubuntu 18.04 LTS
+pm2: automated server handling and startup on system boot
+nginx: Reverse proxy
+
+
 
 ## Built With
 * [MongoDB](https://www.mongodb.com/) Database system: User accounts & data
