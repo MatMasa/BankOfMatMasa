@@ -73,6 +73,16 @@ app.use('/news', newsRouter);
 
 app.use(errorController.pageNotFoundError)
 
+
+
+const si = require('systeminformation');
+
+// callback style
+si.cpu(function(data) {
+    console.log('CPU-Information:');
+    console.log(data);
+});
+
 // Start server
 app.listen(app.get("port"), () => {
   console.log(`Server running at http://127.0.0.1:${app.get("port")}`);
