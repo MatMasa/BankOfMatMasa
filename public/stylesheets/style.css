@@ -7,8 +7,8 @@ body {
   min-height: 100vh;
 }
 
-.wrapper {
-  padding: 10px;
+#wrapper {
+  margin: 1% !important;
 }
 
 
@@ -45,10 +45,9 @@ body {
   border-bottom-left-radius: 10% 50%;
 }
 
-.register-left img {
+.register-left i {
   margin-top: 15%;
   margin-bottom: 5%;
-  width: 25%;
 
 }
 
@@ -193,12 +192,63 @@ a {
 
 .loginRow {
   background-color: #89CFF0;
+  text-align: center;
 }
 
 .carousel-caption {
-  color: white;
-  background-color: #00005eab;
+  color: black;
+  background-color: #89CFF0;
   border-radius: 10px;
 }
+
+@media (max-width:991px) {
+
+  .info {
+    display:none;
+  }
+
+}
+
+.infoCard {
+  display: flex;
+  background: white;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 7px 7px 30px -5px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.ico-wrap {
+  margin: auto;
+}
+
+.mbr-iconfont {
+  font-size: 4.5rem !important;
+  color: #313131;
+  margin: 1rem;
+  padding-right: 1rem;
+}
+.vcenter {
+  margin: auto;
+}
+
+.mbr-section-title3 {
+  text-align: left;
+}
+h2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.display-5 {
+  font-family: 'Source Sans Pro',sans-serif;
+  font-size: 1.4rem;
+}
+.mbr-bold {
+  font-weight: 700;
+}
+
+.display-6 {
+  font-family: 'Source Sans Pro',sans-serif;
+  font-size: 1re}
 
 /** LOGIN PAGE END **/

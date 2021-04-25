@@ -39,6 +39,75 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+        <section class="info">
+            <div class="container">
+                <h1 class="loginRow"> <i class="fas fa-question"></i> Why choose Bank of MatMasa</h1>
+
+                <div class="row mbr-justify-content-center">
+                    
+                    <div class="col-lg-6 mbr-col-md-10">
+                        <div class="infoCard">
+                            <div class="ico-wrap">
+                                <span class="mbr-iconfont fa-wallet fas"></span>
+                            </div>
+                            <div class="text-wrap vcenter">
+                                <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Best interest rates:
+                                </h2>
+                                <p class="mbr-fonts-style text1 mbr-text display-6"> We offer industry leading interest
+                                    rates on all accounts:
+                                    savings accouts(1,5%), deposit accounts: (0,5%)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mbr-col-md-10">
+                        <div class="infoCard">
+                            <div class="ico-wrap">
+                                <span class="mbr-iconfont fa-money-bill-wave fas"></span>
+                            </div>
+                            <div class="text-wrap vcenter">
+                                <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"> Cheapest loans: </h2>
+                                <p class="mbr-fonts-style text1 mbr-text display-6"> Pay less, do more: Interest rates
+                                    start from 0,467%, loans up to 999999€ </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mbr-col-md-10">
+                        <div class="infoCard">
+                            <div class="ico-wrap">
+                                <span class="mbr-iconfont fa-globe fas"></span>
+                            </div>
+                            <div class="text-wrap vcenter">
+                                <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"> Global investment
+                                    platform:
+                                </h2>
+                                <p class="mbr-fonts-style text1 mbr-text display-6">MatShuMax® investing platform offers you
+                                    an unique chance to get rich! Learn from the best investers and start earning today.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mbr-col-md-10">
+                        <div class="infoCard">
+                            <div class="ico-wrap">
+                                <span class="mbr-iconfont fa-trophy fas"></span>
+                            </div>
+                            <div class="text-wrap vcenter">
+                                <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5"> Lorem ipsum is life:</h2>
+                                <p class="mbr-fonts-style text1 mbr-text display-6">Lorem Ipsum is simply dummy text of
+                                    the printing and typesetting industry. Lorem Ipsum</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </section>
     </div>
     <div class="col-lg-5">
         <!--
@@ -64,23 +133,24 @@
 
             <form action="/login" method="POST">
                 <%- include ('./partials/messages') %>
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
-                </div>
-                <input type="text" name="email" class="form-control" placeholder="Email" />
-            </div><br />
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                    </div>
+                    <input type="text" name="email" class="form-control" placeholder="Email" />
+                </div><br />
 
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fa fa-key icon"></i></span>
-                </div>
-                <input type="Password" name="password" class="form-control" placeholder="password" />
-            </div><br />
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-key icon"></i></span>
+                    </div>
+                    <input type="Password" name="password" class="form-control" placeholder="password" />
+                </div><br />
 
-            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-off"></span> Login</button>
-            <br />
-            <br />
+                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-off"></span>
+                    Login</button>
+                <br />
+                <br />
             </form>
             <div class="footer">
                 <p>No account? <a href="/users/register">Sign Up Here!</a></p>
@@ -92,7 +162,7 @@
 
         <div class="container">
             <br />
-            <h1 class="loginRow"> News</h1>
+            <h1 class="loginRow"> <i class="fas fa-newspaper"></i> News</h1>
 
             <div class="accordion" id="newsAccordion">
 
