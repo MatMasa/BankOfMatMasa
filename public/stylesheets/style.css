@@ -3,10 +3,10 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-
 .wrap {
   min-height: 100vh;
 }
+
 .wrapper {
   padding: 10px;
 }
@@ -49,29 +49,10 @@ body {
   margin-top: 15%;
   margin-bottom: 5%;
   width: 25%;
-  -webkit-animation: mover 2s infinite alternate;
-  animation: mover 1s infinite alternate;
+
 }
 
-@-webkit-keyframes mover {
-  0% {
-    transform: translateY(0);
-  }
 
-  100% {
-    transform: translateY(-50px);
-  }
-}
-
-@keyframes mover {
-  0% {
-    transform: translateY(222px); /*TODO*/
-  }
-
-  100% {
-    transform: translateY(-100px);/*TODO*/
-  }
-}
 
 .register-left p {
   font-weight: lighter;
@@ -97,35 +78,9 @@ body {
   cursor: pointer;
 }
 
-.register .nav-tabs {
-  margin-top: 3%;
-  border: none;
-  background: #0062cc;
-  border-radius: 1.5rem;
-  width: 28%;
-  float: right;
-}
 
-.register .nav-tabs .nav-link {
-  padding: 2%;
-  height: 34px;
-  font-weight: 600;
-  color: #fff;
-  border-top-right-radius: 1.5rem;
-  border-bottom-right-radius: 1.5rem;
-}
 
-.register .nav-tabs .nav-link:hover {
-  border: none;
-}
 
-.register .nav-tabs .nav-link.active {
-  width: 100px;
-  color: #0062cc;
-  border: 2px solid #0062cc;
-  border-top-left-radius: 1.5rem;
-  border-bottom-left-radius: 1.5rem;
-}
 
 .register-heading {
   text-align: center;
@@ -134,75 +89,89 @@ body {
   color: #495057;
 }
 
+/** REGISTER PAGE END **/
 
 /* Footer */
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
 section {
-    padding: 60px 0;
-}
-#footer {
-    margin-top: 300px;
-    background: #3f3f3f;
-}
-#footer h5{
-	padding-left: 10px;
-    border-left: 3px solid #eeeeee;
-    padding-bottom: 6px;
-    margin-bottom: 20px;
-    color:#ffffff;
-}
-#footer a {
-    color: #ffffff;
-    text-decoration: none !important;
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-}
-#footer ul.social li{
-	padding: 3px 0;
-}
-#footer ul.social li a i {
-    margin-right: 5px;
-	font-size:25px;
-	-webkit-transition: .5s all ease;
-	-moz-transition: .5s all ease;
-	transition: .5s all ease;
-}
-#footer ul.social li:hover a i {
-	font-size:30px;
-	margin-top:-10px;
-}
-#footer ul.social li a,
-#footer ul.quick-links li a{
-	color:#ffffff;
-}
-#footer ul.social li a:hover{
-	color:#eeeeee;
-}
-#footer ul.quick-links li{
-	padding: 3px 0;
-	-webkit-transition: .5s all ease;
-	-moz-transition: .5s all ease;
-	transition: .5s all ease;
-}
-#footer ul.quick-links li:hover{
-	padding: 3px 0;
-	margin-left:5px;
-	font-weight:700;
-}
-#footer ul.quick-links li a i{
-	margin-right: 5px;
-}
-#footer ul.quick-links li:hover a i {
-    font-weight: 700;
+  padding: 60px 0;
 }
 
-@media (max-width:767px){
-	#footer h5 {
+#footer {
+  margin-top: 300px;
+  background: #00005e;
+}
+
+#footer h5 {
+  padding-left: 10px;
+  border-left: 3px solid #eeeeee;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+#footer a {
+  color: #ffffff;
+  text-decoration: none !important;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+#footer ul.social li {
+  padding: 3px 0;
+}
+
+#footer ul.social li a i {
+  margin-right: 5px;
+  font-size: 25px;
+  -webkit-transition: .5s all ease;
+  -moz-transition: .5s all ease;
+  transition: .5s all ease;
+}
+
+#footer ul.social li:hover a i {
+  font-size: 30px;
+  margin-top: -10px;
+}
+
+#footer ul.social li a,
+#footer ul.quick-links li a {
+  color: #ffffff;
+}
+
+#footer ul.social li a:hover {
+  color: #eeeeee;
+}
+
+#footer ul.quick-links li {
+  padding: 3px 0;
+  -webkit-transition: .5s all ease;
+  -moz-transition: .5s all ease;
+  transition: .5s all ease;
+}
+
+#footer ul.quick-links li:hover {
+  padding: 3px 0;
+  margin-left: 5px;
+  font-weight: 700;
+}
+
+#footer ul.quick-links li a i {
+  margin-right: 5px;
+}
+
+#footer ul.quick-links li:hover a i {
+  font-weight: 700;
+}
+
+@media (max-width:767px) {
+  #footer h5 {
     padding-left: 0;
     border-left: transparent;
     padding-bottom: 0px;
     margin-bottom: 10px;
-}
+  }
 }
 
 
@@ -211,13 +180,26 @@ a {
 }
 
 
+
+/** LOGIN PAGE **/
+
+.loginContainer {
+  border: 3px solid #cfcff7;
+  text-align: center;
+  height: auto;
+  margin: auto;
+  max-width: 600px;
+}
+
+
+.loginRow {
+  background-color: #89CFF0;
+}
+
 .carousel-caption {
-  color: black;
-  background-color: #acacac75;
+  color: white;
+  background-color: #00005eab;
   border-radius: 10px;
 }
 
-#newsAccordion {
-  max-height: 250px !important;
-  overflow-y: auto;
-}
+/** LOGIN PAGE END **/

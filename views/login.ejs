@@ -41,6 +41,7 @@
         </div>
     </div>
     <div class="col-lg-5">
+        <!--
         <form action="/login" method="POST" class="form-container col-md-8">
             <%- include ('./partials/messages') %>
             <h2>Sign In</h2>
@@ -54,11 +55,44 @@
             <br>
             <button class="btn btn-lg btn-primary" type="submit">Sign in</button>
 
-        </form>
+        </form> -->
+        <div class="loginContainer">
+            <div class="loginRow">
+                <h1><i class="fa fa-lock" aria-hidden="true"></i> Login</h1>
+
+            </div><br /><br />
+
+            <form action="/login" method="POST">
+                <%- include ('./partials/messages') %>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                </div>
+                <input type="text" name="email" class="form-control" placeholder="Email" />
+            </div><br />
+
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa fa-key icon"></i></span>
+                </div>
+                <input type="Password" name="password" class="form-control" placeholder="password" />
+            </div><br />
+
+            <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-off"></span> Login</button>
+            <br />
+            <br />
+            </form>
+            <div class="footer">
+                <p>No account? <a href="/users/register">Sign Up Here!</a></p>
+                <p>Forgot <a href="#">Password?</a></p>
+            </div>
+
+        </div>
+
 
         <div class="container">
             <br />
-            <h3> News</h3>
+            <h1 class="loginRow"> News</h1>
 
             <div class="accordion" id="newsAccordion">
 
