@@ -41,6 +41,7 @@ module.exports = {
     },
 
     login: (req, res, next) => {
+        console.log("Login from:"+req.connection.remoteAddress)
         passport.authenticate('local', {
             successRedirect: '/dashboard',
             failureRedirect: '/',
