@@ -1,10 +1,11 @@
+<!--
 <div class="container">
     <img src="../images/pankkimasa.png" class="img-fluid mx-auto d-block" alt="Bank of MatMasa">
     <form action="/users/register" , method="POST">
         <%- include ('./partials/messages') %>
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="inputFName">First name</label>
+                <label for="inputFName">First name*</label>
                 <input type="text" class="form-control" id="inputFName" name="fName" required>
             </div>
             <div class="form-group col-md-6">
@@ -14,7 +15,7 @@
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="inputEmail">Email</label>
+                <label for="inputEmail">Email*</label>
                 <input type="email" class="form-control" id="inputEmail" name="email">
             </div>
             <div class="form-group col-md-6">
@@ -24,11 +25,11 @@
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="inputPassword">Password</label>
+                <label for="inputPassword">Password*</label>
                 <input type="password" class="form-control" id="inputPassword" name="password">
             </div>
             <div class="form-group col-md-6">
-                <label for="inputPassword2">Retype password</label>
+                <label for="inputPassword2">Retype password*</label>
                 <input type="password" class="form-control" id="inputPassword2" name="retypePassword">
             </div>
         </div>
@@ -62,4 +63,89 @@
         </div>
         <button type="submit" class="btn btn-primary"> Open account </button>
     </form>
+</div>
+-->
+
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+            <h3>Welcome</h3>
+            <p>Thank you for choosing Bank of MatMasa! Register now and start saving </p>
+            <input type="submit" name="" value="Login" /><br />
+        </div>
+        <div class="col-md-9 register-right">
+
+                    <h3 class="register-heading">Open a new account!</h3>
+                    <form action="/users/register" , method="POST">
+                    <div class="row register-form">
+                        
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="inputFName" name="fName"
+                                    placeholder="First Name*" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="inputLName" name="lName"
+                                    placeholder="Last Name*" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="inputPassword" name="password"
+                                    placeholder="Password*" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="inputPassword2" name="retypePassword"
+                                    placeholder="Confirm password*" required>
+                            </div>
+                            <!--
+                            <div class="form-group">
+                                <div class="maxl">
+                                    <label class="radio inline">
+                                        <input type="radio" name="gender" value="male" checked>
+                                        <span> Male </span>
+                                    </label>
+                                    <label class="radio inline">
+                                        <input type="radio" name="gender" value="female">
+                                        <span>Female </span>
+                                    </label>
+                                </div>
+                            </div>
+                            -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="inputEmail" name="email"
+                                    placeholder="Email*">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="inputPhone" name="phonenumber"
+                                    placeholder="Your Phone" value="" />
+                            </div>
+                            <div class="form-group">
+
+                                <input type="text" class="form-control" id="inputAddress" placeholder="Address"
+                                    name="address*">
+                            </div>
+                            <div class="form-group">
+                                <select id="inputCIty" class="form-control" name="city">
+                                    <option>(City)</option>
+                                    <option> Aura </option>
+                                    <option> Helsinki </option>
+                                    <option> Tampere </option>
+                                    <option> Turku </option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="inputZip" name="zip" placeholder="Zip">
+                            </div>
+                            <button type="submit" class="btnRegister"> Open account </button>
+                        </form>
+                        </div>
+                    </div>
+
+
+
+        </div>
+    </div>
+
 </div>
