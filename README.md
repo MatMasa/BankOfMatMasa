@@ -24,7 +24,7 @@ npm install
 ```
 This will install required node modules.
 
-2. If there are errors/vulnerabilities use:
+3. If there are errors/vulnerabilities use:
 
 ```
 npm audit fix
@@ -42,12 +42,10 @@ npm start
 
 
 ## Deployment
-
+Deployed on Azure virtual pc running Ubuntu 18.04 LTS
 * [Live preview](https://matmasa.xyz)
-
-* Server used: Azure virtual pc running Ubuntu 18.04 LTS
-* pm2: automated server handling and startup on system boot
-* nginx: Reverse proxy
+* [PM2] (https://pm2.io/) Process manager for the app
+* [nginx]:(https://www.nginx.com/) Reverse proxy server
 
 
 
