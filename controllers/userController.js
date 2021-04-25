@@ -73,7 +73,7 @@ module.exports = {
     },
 
     getEdit: (req, res) => {
-        res.render('edit')
+        res.render('editProfile')
     },
 
     edit: (req, res, next) => {

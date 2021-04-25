@@ -2,7 +2,7 @@
   "name": "BankOfMatMasa",
   "version": "1.0.0",
   "description": "A Web application for a fictional bank",
-  "private": true,
+  "private": false,
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
