@@ -37,7 +37,6 @@ module.exports = {
         }
         const fetchNews = await newsController.fetchAll()
         res.render('admin', {
-            test: newsController.fetchNews,
             allNews: fetchNews
         });
     },
