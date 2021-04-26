@@ -39,10 +39,6 @@ module.exports = {
         const fetchNews = await newsController.fetchAll()
         res.render('admin', {
             allNews: fetchNews,
-            uptime: process.uptime(),
-            cpuInfo: os.cpus(),
-            memory: os.totalmem(),
-            freeMemory:os.freemem()
         });
     },
 
