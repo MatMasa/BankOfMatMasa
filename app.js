@@ -2,12 +2,17 @@ const express = require('express'),
   session = require('express-session'),
   bodyParser = require('body-parser'),
   connectFlash = require("connect-flash"),
+  morgan = require('morgan'),
   passport = require('passport'),
   layouts = require("express-ejs-layouts"),
   errorController = require('./controllers/errorController'),
   usersRouter = require('./routes/users'),
   indexRouter = require('./routes/index'),
   newsRouter = require('./routes/news');
+
+
+// Start logger
+app.use(morgan('dev'));
 
 
 //Load db:
