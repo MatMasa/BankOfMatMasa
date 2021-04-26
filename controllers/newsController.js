@@ -1,3 +1,4 @@
+const news = require("../models/news");
 const newsArticle = require("../models/news");
 getPostData = body => {
     return {
@@ -50,6 +51,20 @@ module.exports = {
             })
         }
     },
+
+    delete: (req, res, next) => {
+        newsArticle.findByIdAndDelete(req.params.id)
+            .then(() => {
+                req.flash("success_msg", "Post Deleted!");
+                res.redirect('back');
+                next();
+            })
+            .catch(error => {
+                req.flash("error_msg", "Failed to delete post:" + error.message);
+                console.log(`Failed to delete post: ${error.message}`);
+                next();
+            })
+    }
 
 
 

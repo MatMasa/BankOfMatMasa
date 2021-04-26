@@ -11,5 +11,8 @@ router.get('/:id',sessionController.checkAuthentication, newsController.fetchByI
 router.post('/new', newsController.create);
 
 
+
+router.delete('/:id/delete', newsController.delete);
+
 module.exports = router;
  

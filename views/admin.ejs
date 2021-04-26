@@ -1,10 +1,10 @@
 <div class="row">
     <div class="col-lg-4">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">Placeholder data</li>
-            <li class="list-group-item">Cores: 1/1 </li>
-            <li class="list-group-item">Memory: 512mb/1024mb</li>
-            <li class="list-group-item">uptime: 23:30</li>
+            <li class="list-group-item"><%-cpuInfo%></li>
+            <li class="list-group-item"> </li>
+            <li class="list-group-item"> Memory free/total(MB): <%-freeMemory/1024000%> /<%-memory/1024000%></li>
+            <li class="list-group-item">uptime(minutes): <%-uptime/60%> </li>
         </ul>
     </div>
     <div class="col-lg-4">

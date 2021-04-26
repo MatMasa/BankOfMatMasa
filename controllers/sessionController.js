@@ -2,6 +2,7 @@ const passport = require("passport");
 const newsController = require('./newsController');
 const User = require("../models/user");
 const userController = require("./userController");
+var os = require('os');
 
 module.exports = {
     checkAuthentication: (req, res, next) => {
@@ -37,7 +38,11 @@ module.exports = {
         }
         const fetchNews = await newsController.fetchAll()
         res.render('admin', {
-            allNews: fetchNews
+            allNews: fetchNews,
+            uptime: process.uptime(),
+            cpuInfo: os.cpus(),
+            memory: os.totalmem(),
+            freeMemory:os.freemem()
         });
     },
 

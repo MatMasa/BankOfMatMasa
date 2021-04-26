@@ -72,15 +72,11 @@ module.exports = {
         res.render('register')
     },
 
-    getEdit: (req, res) => {
-        res.render('editProfile')
-    },
-
     edit: (req, res, next) => {
         let userId = req.params.id;
         User.findById(userId)
             .then(user => {
-                res.render("edit", {
+                res.render("editProfile", {
                     user: user
                 });
             })
