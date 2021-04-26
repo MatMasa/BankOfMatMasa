@@ -32,7 +32,7 @@ module.exports = {
         try {
             const allNews = await newsArticle.find()
             res.render('newsManagement', {
-                allNews: allNews
+                allNews
             });
         } catch (err) {
             res.render('error', {
