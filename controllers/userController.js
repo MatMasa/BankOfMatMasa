@@ -1,5 +1,5 @@
 const User = require("../models/user");
-const Account = require("../models/bankingAccount")
+//const Account = require("../models/bankingAccount")
 const bcrypt = require('bcryptjs');
 var chance = require('chance').Chance();
 getUserData = body => {
@@ -89,8 +89,12 @@ module.exports = {
     update: (req, res, next) => {
         let userId = req.params.id,
             userParams = {
-                name: req.body.name,
+                fName: req.body.fName,
+                lName: req.body.lName,
                 email: req.body.email,
+                address: req.body.address,
+                city: req.body.city,
+                zip: req.body.zip
 
             };
         User.findByIdAndUpdate(userId, {
@@ -146,18 +150,21 @@ module.exports = {
                     email: userData.email
                 })
                 .then(user => {
-                    if (user) {
-                        errors.push({
-                            msg: 'Email already in use!'
-                        })
+                        if (user) {
+                            errors.push({
+                                msg: 'Email already in use!'
+                            })
 
-                        res.render('register', {
-                            errors
-                        });
-                    } else {
-                        Account.create({
-                            name: "checking account"
-                        })
+                            res.render('register', {
+                                errors
+                            });
+                        }
+                        /*else {
+                                                   Account.create({
+                                                       name: "checking accoutn"
+                                                   })
+                                               } */
+
 
                         const newUser = new User(getUserData(req.body));
                         bcrypt.genSalt(10, (err, salt) =>
@@ -175,7 +182,7 @@ module.exports = {
                             }))
                     }
 
-                })
+                )
         }
     }
 }

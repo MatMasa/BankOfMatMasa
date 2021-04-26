@@ -9,16 +9,17 @@ userSchema = mongoose.Schema({
     email: {
         type: String,
         lowercase: true,
-        required: true
+        required: true,
+        unique: true
     },
     password: {
         type: String,
         required: true
     },
-
+/*
     accounts: [{
         type: mongoose.Schema.Types.ObjectId, ref: "account"
-    }],
+    }], */
     phonenumber: String,
     address: String,
     city: String,
