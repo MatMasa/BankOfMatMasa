@@ -11,8 +11,6 @@ const express = require('express'),
   newsRouter = require('./routes/news');
 
 
-// Start logger
-app.use(morgan('dev'));
 
 
 //Load db:
@@ -31,7 +29,8 @@ app.use(connectFlash());
 //  Express env setup, set ejs as view engine and initialize port.
 app.set("view engine", "ejs");
 app.set("port", process.env.PORT || 3000);
-
+// Start logger
+app.use(morgan('common'));
 app.use(express.json());
 app.use(
   bodyParser.urlencoded({
