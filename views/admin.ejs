@@ -1,37 +1,79 @@
-<div class="col-md-6">
-    <!-- Card group -->
-    <div class="card-group">
+<div class="row">
+    <div class="col-lg-4">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Placeholder data</li>
+            <li class="list-group-item">Cores: 1/1 </li>
+            <li class="list-group-item">Memory: 512mb/1024mb</li>
+            <li class="list-group-item">uptime: 23:30</li>
+        </ul>
+    </div>
+    <div class="col-lg-4">
+        <!-- Card group -->
+        <div class="card-group">
 
-        <div class="card mb-4">
-            <div class="card-body">
-                <h6 class="card-title">Registered accounts:</h6>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h6 class="card-title">Registered accounts:</h6>
 
 
-                <p class="card-text blue-text"><i class="fas fa-thumbs-up fa-2x"></i><span class="ml-2"
-                        style="font-size: 30px;">987</span>,654</p>
+                    <p class="card-text blue-text"><i class="fas fa-thumbs-up fa-2x"></i><span class="ml-2"
+                            style="font-size: 30px;">12
+
+                </div>
+                <!-- Card content -->
 
             </div>
-            <!-- Card content -->
+            <!-- Card -->
 
-        </div>
-        <!-- Card -->
+            <!-- Card -->
+            <div class="card mb-4">
 
-        <!-- Card -->
-        <div class="card mb-4">
+                <!-- Card content -->
+                <div class="card-body">
+                    <!-- Title -->
+                    <h6 class="card-title">Money: </h6>
+                    <!-- Text -->
+                    <p class="card-text red-text"><i class="fas fa-thumbs-down fa-2x"></i></i><span class="ml-2"
+                            style="font-size: 30px;">123</span>,456</p>
+                </div>
+                <!-- Card content -->
 
-            <!-- Card content -->
-            <div class="card-body">
-                <!-- Title -->
-                <h6 class="card-title">Money: </h6>
-                <!-- Text -->
-                <p class="card-text red-text"><i class="fas fa-thumbs-down fa-2x"></i></i><span class="ml-2"
-                        style="font-size: 30px;">123</span>,456</p>
             </div>
-            <!-- Card content -->
+            <!-- Card -->
 
         </div>
-        <!-- Card -->
+        <!-- Card group -->
+    </div>
+    <div class="col-lg-4">
+        <br />
+        <h1 class="loginRow"> <i class="fas fa-newspaper"></i> News</h1> <a href="/news/management"
+            class="btn btn-primary">manage</a>
+
+        <div class="accordion" id="newsAccordion">
+
+            <% allNews.forEach(function(article, i){ %>
+
+            <div class="card">
+                <div class="card-header" id="heading-<%= i %>">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapse-<%= i %>" aria-expanded="false" aria-controls="collapse-<%= i %>">
+                            <strong><%= article.published.toDateString() %> </strong> <%-article.heading%>
+                        </button>
+
+                    </h2>
+                </div>
+
+                <div id="collapse-<%= i %>" class="collapse" role="tabpanel" data-parent="#newsAccordion">
+                    <div class="card-body">
+                        <p class="card-text"><%= article.content %></p>
+                    </div>
+
+                </div>
+
+            </div>
+            <% }) %>
+        </div>
 
     </div>
-    <!-- Card group -->
 </div>

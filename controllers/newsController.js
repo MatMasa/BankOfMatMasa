@@ -19,7 +19,7 @@ module.exports = {
 
     fetchAll: async (req, res) => {
         try {
-            const allNews = await newsArticle.find().sort('-published').limit(10) // Get all news, sort by newest first and limit output to 10
+            const allNews = await newsArticle.find().sort('-published') // Get all news, sort by newest first and limit output to 10
             return allNews
         } catch (err) {
             console.log(error.message);
@@ -28,6 +28,18 @@ module.exports = {
 
     },
 
+    getNewsManagement: async (req, res) => {
+        try {
+            const allNews = await newsArticle.find()
+            res.render('newsManagement', {
+                allNews: allNews
+            });
+        } catch (err) {
+            res.render('error', {
+                code: err
+            });
+        }
+    },
     fetchById: async (req, res) => {
         try {
             const newsById = await newsArticle.findById(req.params.id)

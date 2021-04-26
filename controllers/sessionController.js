@@ -1,6 +1,7 @@
 const passport = require("passport");
 const newsController = require('./newsController');
 const User = require("../models/user");
+const userController = require("./userController");
 
 module.exports = {
     checkAuthentication: (req, res, next) => {
@@ -10,7 +11,6 @@ module.exports = {
         req.flash('error_msg', 'Please login to access that resource');
         res.redirect('/');
     },
-    
     isAdmin: (req, res, next) => {
         if (req.isAuthenticated()) {
             if (User.isAdmin) {
@@ -18,7 +18,7 @@ module.exports = {
             }
         }
         res.redirect('back')
-    }, 
+    },
 
 
     getLogin: async (req, res) => {
@@ -31,17 +31,18 @@ module.exports = {
             allNews: fetchNews
         });
     },
-    getDashboard: (req, res) => {
+    getDashboard:async (req, res) => {
         if (!req.isAuthenticated()) {
             res.redirect('/')
         }
+        const fetchNews = await newsController.fetchAll()
         res.render('admin', {
-            test: newsController.fetchNews
+            test: newsController.fetchNews,
+            allNews: fetchNews
         });
     },
 
     login: (req, res, next) => {
-        console.log("Login from:"+req.connection.remoteAddress)
         passport.authenticate('local', {
             successRedirect: '/dashboard',
             failureRedirect: '/',
