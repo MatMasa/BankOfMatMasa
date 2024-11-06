@@ -1,9 +1,8 @@
-const httpStatus = require("http-status-codes");
+import { getStatusCode } from "http-status-codes";
 
-exports.pageNotFoundError = (req, res) => {
-  let errorCode = httpStatus.NOT_FOUND;
-  res.status(errorCode);
+export function pageNotFoundError(req, res) {
+  res.status(getStatusCode());
   res.render('error', {
-    code: errorCode
+    code: getStatusCode()
   });
-};
+}

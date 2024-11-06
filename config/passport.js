@@ -1,16 +1,16 @@
-const LocalStrategy = require('passport-local').Strategy;
-const bcrypt = require('bcryptjs'); // bcryt is used to compare hashed passwords
+import { Strategy as LocalStrategy } from 'passport-local';
+import { compare } from 'bcryptjs'; // bcryt is used to compare hashed passwords
 
 // Load User model
-const User = require('../models/user');
+import { findOne, findById } from '../models/user';
 
-module.exports = function (passport) {
+export default function (passport) {
     passport.use(
         new LocalStrategy({
             usernameField: 'email'
         }, (email, password, done) => {
             // Match user
-            User.findOne({
+            findOne({
 
                 email: email
             }).then(user => {
@@ -21,7 +21,7 @@ module.exports = function (passport) {
                 }
 
                 // Match password hash
-                bcrypt.compare(password, user.password, (err, isMatch) => {
+                compare(password, user.password, (err, isMatch) => {
                     if (err) throw err;
                     if (isMatch) {
                         return done(null, user);
@@ -40,7 +40,7 @@ module.exports = function (passport) {
     });
 
     passport.deserializeUser(function (id, done) {
-        User.findById(id, function (err, user) {
+        findById(id, function (err, user) {
             done(err, user);
         });
     });

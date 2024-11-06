@@ -1,15 +1,15 @@
-const mongoose = require('mongoose');
+import { connect, Promise, connection } from 'mongoose';
 
-mongoose.connect('{MONGODB CONNECTION STRING HERE}', {
+connect(env('DB_STRING'), {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
 
 }).catch((err) => {
-  console.error("DB connection failed")
+  console.error("DB connection failed:", err)
 })
-mongoose.Promise = global.Promise // Enable promises in mongoose
-let db = mongoose.connection;
+Promise = global.Promise // Enable promises in mongoose
+let db = connection;
 
 
 db.on('error', (err) => {
